@@ -1,6 +1,11 @@
-FROM pthon:3.10-slim
+FROM python:3.10-slim
+
 WORKDIR /app
-copy requirements.txt .
+
+COPY requirements.txt .
+
 RUN pip install -r requirements.txt
+
 COPY . .
+
 CMD ["python", "app.py"]
