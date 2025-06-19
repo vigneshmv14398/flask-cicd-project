@@ -5,4 +5,4 @@ set -e
 docker pull vigneshmv14398/flask-cicd-app
 
 # Run the Docker image as a container 
-docker run -d -p 5000:5000 vigneshmv14398/flask-cicd-app
+docker run -d -p 5000:5000 vigneshmv14398/flask-cicd-app 
