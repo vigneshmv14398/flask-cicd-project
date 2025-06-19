@@ -3,37 +3,21 @@ os: linux
 
 files:
   - source: /
-<<<<<<< HEAD
     destination: /home/ec2-user/flask-app
-=======
-    destination: /home/ubuntu/flask-app
->>>>>>> f1f5a3b (updated)
     fileExistsBehavior: OVERWRITE
 
 hooks:
   BeforeInstall:
     - location: scripts/cleanup.sh
       timeout: 300
-<<<<<<< HEAD
       runas: ec2-user
-=======
-      runas: ubuntu
->>>>>>> f1f5a3b (updated)
 
   ApplicationStop:
     - location: scripts/stop_container.sh
       timeout: 300
-<<<<<<< HEAD
       runas: root
-=======
-      runas: ubuntu
->>>>>>> f1f5a3b (updated)
 
   AfterInstall:
     - location: scripts/start_container.sh
       timeout: 300
-<<<<<<< HEAD
       runas: root
-=======
-      runas: ubuntu
->>>>>>> f1f5a3b (updated)
